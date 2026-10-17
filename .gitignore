@@ -5,4 +5,6 @@ firebase-debug.log*
 *.local
 .DS_Store
 test-results/
-Lab1_rozwiazanie.zip
+reports
+*.pdf
+.gitignore
