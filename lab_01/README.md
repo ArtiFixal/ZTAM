@@ -17,7 +17,7 @@ Otwórz `http://localhost:3000`.
 
 ## Zawartość
 
-| Plik / folder | Rola |hostingu
+| Plik / folder | Rola | 
 | --- | --- |
 | `public/index.html`, `styles.css`, `index.js` | Responsywna strona, status sieci, rejestracja SW i przycisk instalacji |
 | `public/manifest.json` | Nazwa, kolory, względny zakres, tryb standalone i ikony |
