@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Moja pierwsza PWA",
+  "short_name": "MojaPWA",
+  "description": "Pierwsza aplikacja PWA — instalacja, responsywność i praca offline.",
+  "lang": "pl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f8f2",
+  "theme_color": "#164b39",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "./icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

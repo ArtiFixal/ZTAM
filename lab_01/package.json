@@ -1,0 +1,28 @@
+{
+  "name": "ztam-lab-01-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Laboratorium 1 — instalowalna aplikacja PWA z obsługą offline",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "assets": "node scripts/assets.mjs",
+    "precache": "node scripts/precache.mjs",
+    "prepare:public": "npm run assets && npm run precache",
+    "audit": "node scripts/audit.mjs"
+  },
+  "devDependencies": {
+    "chrome-launcher": "1.2.2",
+    "lighthouse": "13.5.0",
+    "playwright": "1.64.0",
+    "sharp": "0.35.5",
+    "workbox-core": "7.4.1",
+    "workbox-precaching": "7.4.1",
+    "workbox-routing": "7.4.1",
+    "workbox-strategies": "7.4.1",
+    "workbox-sw": "7.4.1"
+  }
+}

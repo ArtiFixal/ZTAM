@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#164b39">
+    <title>Nie znaleziono strony — Moja PWA</title>
+    <style>
+      body { margin: 0; background: #f6f8f2; color: #152e25; font: 1rem/1.6 system-ui, sans-serif; }
+      main { max-width: 38rem; margin: 10vh auto; padding: 1.5rem; }
+      h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2; }
+      a { color: #164b39; text-underline-offset: .2em; }
+      a:focus-visible { outline: 3px solid #805500; outline-offset: 5px; }
+    </style>
+  </head>
+  <body>
+    <main><p>Moja pierwsza PWA · 404</p><h1>Nie znaleziono strony</h1><p>Sprawdź adres lub wróć do aplikacji.</p><a id="home" href="./">Wróć do strony głównej</a></main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistration().then(function (registration) {
+          if (registration) document.getElementById('home').href = registration.scope;
+        }).catch(function () {});
+      }
+    </script>
+  </body>
+</html>

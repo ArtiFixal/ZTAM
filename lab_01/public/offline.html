@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#164b39">
+    <title>Jesteś offline — Moja PWA</title>
+    <style>
+      body { margin: 0; background: #f6f8f2; color: #152e25; font: 1rem/1.6 system-ui, sans-serif; }
+      main { max-width: 38rem; margin: 10vh auto; padding: 1.5rem; }
+      h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2; }
+      p { color: #485e54; }
+      a { display: inline-block; margin-top: 1rem; padding: .85rem 1.25rem; border-radius: .6rem; background: #164b39; color: white; text-underline-offset: .2em; }
+      a:focus-visible { outline: 3px solid #805500; outline-offset: 5px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>Moja pierwsza PWA</p>
+      <h1>Jesteś offline</h1>
+      <p>Ta podstrona nie jest dostępna bez połączenia z Internetem. Spróbuj ponownie, gdy odzyskasz połączenie.</p>
+      <p>Strona główna jest zapisana na urządzeniu i nadal możesz ją otworzyć.</p>
+      <!-- Względny href zagnieżdżonej podstrony wskazywałby zły katalog.
+           SW zwraca poniższy plik, a skrypt oblicza adres z własnego zakresu. -->
+      <a id="home" href="./">Wróć do strony głównej</a>
+    </main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistration().then(function (registration) {
+          if (registration) document.getElementById('home').href = registration.scope;
+        }).catch(function () {});
+      }
+    </script>
+  </body>
+</html>

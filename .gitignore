@@ -1,0 +1,8 @@
+node_modules/
+.firebase/
+.firebaserc
+firebase-debug.log*
+*.local
+.DS_Store
+test-results/
+Lab1_rozwiazanie.zip

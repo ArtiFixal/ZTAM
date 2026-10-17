@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#164b39">
+    <meta name="description" content="Moja pierwsza PWA. Zainstaluj aplikację i korzystaj z niej także bez Internetu.">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Moja pierwsza PWA</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Moja PWA — strona główna">Moja<span>PWA</span></a>
+      <span class="lab-label">ZTAM · Laboratorium 01</span>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="title">
+        <div class="hero-copy">
+          <p class="eyebrow">Progressive Web App</p>
+          <h1 id="title">Mała aplikacja.<br>Wielkie możliwości.</h1>
+          <p class="lead">Witaj w mojej pierwszej PWA. Działa w przeglądarce, na ekranie głównym i wtedy, gdy zabraknie Internetu.</p>
+          <div class="actions">
+            <button class="install-button button" type="button" hidden>Zainstaluj aplikację</button>
+            <a class="text-link" href="#jak-to-dziala">Poznaj aplikację <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="install-message" role="status" aria-live="polite"></p>
+        </div>
+        <div class="illustration">
+          <img src="./android.png" alt="Zielony robot — maskotka aplikacji" width="320" height="320">
+          <span class="illustration-label">Hello, PWA!</span>
+        </div>
+      </section>
+      <section class="connection" aria-label="Status aplikacji">
+        <div><span class="status-dot" aria-hidden="true"></span><strong id="connection-status" role="status">Sprawdzanie połączenia…</strong></div>
+        <p id="offline-status" role="status">Przygotowywanie dostępu offline…</p>
+      </section>
+      <section id="jak-to-dziala" class="features" aria-labelledby="features-title">
+        <h2 id="features-title">Jedna strona, więcej możliwości</h2>
+        <div class="feature-grid">
+          <article><span class="feature-number" aria-hidden="true">01</span><h3>Zawsze pod ręką</h3><p>Zainstaluj aplikację, aby otwierać ją w osobnym oknie z ekranu głównego urządzenia.</p></article>
+          <article><span class="feature-number" aria-hidden="true">02</span><h3>Także bez sieci</h3><p>Po pierwszym uruchomieniu strona i jej grafiki pozostają dostępne bez Internetu.</p></article>
+          <article><span class="feature-number" aria-hidden="true">03</span><h3>Na każdym ekranie</h3><p>Wygodny widok na telefonie i komputerze. Obsługa dotykiem, myszką i klawiaturą.</p></article>
+        </div>
+      </section>
+      <section class="installation-guide" aria-labelledby="installation-title">
+        <h2 id="installation-title">Jak zainstalować?</h2>
+        <p>W Chrome użyj przycisku „Zainstaluj aplikację”, gdy się pojawi, lub opcji instalacji w menu przeglądarki. Na iPhonie otwórz stronę w Safari i wybierz Udostępnij → Do ekranu początkowego.</p>
+        <p>Możesz też korzystać z aplikacji bezpośrednio w przeglądarce.</p>
+      </section>
+      <noscript><p class="notice">Strona działa bez JavaScript. Aby włączyć pracę offline i przycisk instalacji, włącz JavaScript w przeglądarce.</p></noscript>
+    </main>
+    <footer>Moja pierwsza PWA <span aria-hidden="true">·</span> ZTAM, laboratorium 1</footer>
+  </body>
+</html>
