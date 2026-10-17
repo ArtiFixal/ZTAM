@@ -1,0 +1,16 @@
+{
+  "name": "ztam-lab-02-push",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Laboratorium 2 — PWA z powiadomieniami i Web Push",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "keys": "node generate-keys.mjs",
+    "push": "node send-push.mjs",
+    "test": "node --test",
+    "deploy": "npx -y firebase-tools@latest deploy --only hosting --project ztam-lab02"
+  },
+  "dependencies": { "web-push": "3.6.7" }
+}

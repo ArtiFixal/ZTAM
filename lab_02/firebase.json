@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "ztam-lab02",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      { "source": "**", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }] },
+      { "source": "/service-worker.js", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] },
+      { "source": "/vapid-public-key.js", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+    ]
+  }
+}

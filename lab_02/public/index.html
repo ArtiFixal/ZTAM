@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#164b39" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Powiadomienia · Lab 02</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./icons/favicon-32.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./vapid-public-key.js" defer></script>
+    <script src="./notification.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="eyebrow"><span class="dot"></span> ZTAM / LAB 02</div>
+        <h1>W kontakcie.<br /><span>Nawet poza aplikacją.</span></h1>
+        <p class="intro">Twoje centrum powiadomień i Web Push.</p>
+      </header>
+
+      <section class="card permission-card" aria-labelledby="permission-title">
+        <div class="section-heading"><h2 id="permission-title">01 / Uprawnienia</h2><strong id="permission" class="badge">sprawdzanie</strong></div>
+        <p id="permission-help">O zgodę zapytamy dopiero po naciśnięciu przycisku.</p>
+        <button id="enable" type="button">Włącz powiadomienia</button>
+        <p class="meta">Service worker: <span id="worker-status">uruchamianie…</span></p>
+      </section>
+
+      <section class="card" aria-labelledby="form-title">
+        <div class="section-heading"><h2 id="form-title">02 / Nowe powiadomienie</h2><span aria-hidden="true">↗</span></div>
+        <form id="notification-form">
+          <label for="title">Tytuł <span class="required">wymagany</span></label>
+          <input id="title" name="title" maxlength="120" required placeholder="Np. Czas na przerwę" />
+          <label for="body">Treść</label>
+          <textarea id="body" name="body" rows="2" maxlength="1000" placeholder="Co chcesz przekazać?"></textarea>
+          <label for="icon">Ikona</label>
+          <div class="icon-picker">
+            <img id="icon-preview" src="./android.png" width="40" height="40" alt="Podgląd wybranej ikony" />
+            <select id="icon" name="icon">
+              <option value="android.png">Android</option>
+              <option value="icons/message.png">Wiadomość</option>
+              <option value="icons/bell.png">Dzwonek</option>
+            </select>
+          </div>
+          <button id="sw" type="submit" disabled>Wyświetl powiadomienie</button>
+        </form>
+        <button id="local" class="text-button" type="button">Test Notification API ze strony</button>
+        <p class="meta">Na Androidzie korzystaj z formularza powyżej.</p>
+      </section>
+
+      <section class="card" aria-labelledby="push-title">
+        <div class="section-heading"><h2 id="push-title">03 / Web Push</h2><span id="push-state" class="badge">nieaktywna</span></div>
+        <p>Odbieraj wiadomości z serwera również po zamknięciu karty.</p>
+        <div class="actions">
+          <button id="subscribe" type="button" disabled>Subskrybuj push</button>
+          <button id="unsubscribe" class="secondary" type="button" disabled>Anuluj subskrypcję</button>
+        </div>
+        <details>
+          <summary>Subskrypcja dla skryptu wysyłającego</summary>
+          <label for="subscription">Zapisz jako <code>lab_02/subscription.json</code></label>
+          <textarea id="subscription" rows="6" readonly spellcheck="false" placeholder="Tutaj pojawi się Twoja subskrypcja."></textarea>
+          <div class="actions">
+            <button id="copy" class="secondary" type="button" disabled>Kopiuj</button>
+            <button id="download" class="secondary" type="button" disabled>Pobierz JSON</button>
+          </div>
+        </details>
+        <p class="meta">iPhone: dodaj stronę do ekranu początkowego i otwórz ją z ikony (iOS 16.4+).</p>
+      </section>
+      <p id="status" class="status" role="status" aria-live="polite">Gotowe. Zacznij od włączenia powiadomień.</p>
+      <footer>Powiadomienia PWA <span>ZTAM · 2026</span></footer>
+    </main>
+  </body>
+</html>
