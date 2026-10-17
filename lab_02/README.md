@@ -23,8 +23,12 @@ npm run push -- "Nowa wiadomość" "Pozdrowienia z serwera!"
 
 Po sklonowaniu repozytorium uruchom `npm run keys` i opublikuj własną wersję (`npm run deploy` wymaga dostępu do projektu `ztam-lab02`). Nowe klucze wymagają nowych subskrypcji. Klucz prywatny oraz subskrypcja są poza folderem `public` i wykluczone z Gita.
 
-## Zdjęcie
+## Zdjęcia
+### Powiadomienia
 
+![Powiadomienia](notifications.jpg)
+
+### Widok mobile
 ![Zrzut widoku mobile](mobile_screen.png)
 
 ## Zawartość
