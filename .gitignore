@@ -9,4 +9,5 @@ reports
 *.pdf
 .gitignore
 !lab_02/.gitignore
+!lab_04/.gitignore
 .env
