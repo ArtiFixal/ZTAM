@@ -10,4 +10,6 @@ reports
 .gitignore
 !lab_02/.gitignore
 !lab_04/.gitignore
+!lab_05/.gitignore
 .env
+.vscode
