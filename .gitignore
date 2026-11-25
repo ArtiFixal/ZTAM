@@ -8,8 +8,10 @@ test-results/
 reports
 *.pdf
 .gitignore
+.agents
 !lab_02/.gitignore
 !lab_04/.gitignore
 !lab_05/.gitignore
+!lab_06/.gitignore
 .env
 .vscode
